@@ -1,11 +1,4 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
 
 <style>
   :host {
@@ -371,6 +364,28 @@
   
 </div>
 
+
+
+<span style="float: right;" width="2000">
+<mat-sidenav-container>
+  <mat-sidenav mode="over" >
+    <mat-nav-list>
+      <mat-list-item *ngFor="let link of links">
+        <a matLine routerLink="/{{link}}">{{ link }}</a>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>
+</span>
+
+
+
+
+
 <div class="content" role="main">
 
   <!-- Highlight Card -->
@@ -541,6 +556,8 @@
   </div>
   
   <img src="./assets/labs-logo.png"/>
+  
+
 
   <!-- Footer -->
   <footer>
@@ -578,4 +595,5 @@
 
 
 
-<router-outlet></router-outlet>
+
+<!-- <router-outlet></router-outlet>  -->
